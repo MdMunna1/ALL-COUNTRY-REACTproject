@@ -50,7 +50,7 @@ export default function DetaShow(all) {
             btnToggol();
             flagFunction(flags);
           }}
-          className="p-2 bg-lime-600 m-2 font-semibold"
+          className="p-2 rounded-md bg-lime-600 m-2 font-semibold"
         >
           {velu ? "VISITED" : "NOT VISITED"}
         </button>

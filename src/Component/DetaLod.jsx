@@ -6,12 +6,13 @@ export default function DetaLoad() {
   const [countrys, setCountrys] = useState([]);
   const [allFlags,setFlags]=useState([])
   function allFlagsFunction(a){
-    let {png}=a.png
+    
     console.log(a)
-    setFlags({...allFlags , png})
+    setFlags([...allFlags , a])
     
   }
 console.log(allFlags)
+
 
 
 
@@ -23,6 +24,11 @@ console.log(allFlags)
 
   return (
     <>
+    <div className="border flex flex-wrap">
+    {
+  allFlags.map(a=><img className="w-16 h-12 m-1" src={a.png} alt="" /> )
+}
+    </div>
       <div className="grid sm:grid-cols-3 place-content-center">
         {countrys.map((all) => (
           <DetaShow allFlagsFunction={allFlagsFunction} deta={all} />
